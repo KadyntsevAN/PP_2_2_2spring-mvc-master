@@ -21,7 +21,6 @@ public class CarController {
 
     @GetMapping(value = "cars")
     public String printWelcome(@RequestParam(value = "count", required = false) Integer count, ModelMap model) {
-        count = (count == null) ? 0 : count;
         model.addAttribute("cars", carService.getCountCars(getListCars(), count));
         return "car";
     }
