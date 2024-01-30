@@ -19,7 +19,6 @@ public class CarServiceImpl implements CarService {
 
     @Override
     public List<Car> getCountCars(Integer count) {
-        count = (count == null) ? 0 : count;
-        return carDao.getListCars().stream().limit(count).collect(Collectors.toList());
+        return count == null ? carDao.getListCars() : carDao.getListCars().stream().limit(count).collect(Collectors.toList());
     }
 }
