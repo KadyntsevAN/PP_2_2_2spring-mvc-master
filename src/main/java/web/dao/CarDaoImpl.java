@@ -16,8 +16,6 @@ public class CarDaoImpl implements CarDao{
         list.add(new Car("ВАЗ", 2107, 168.0));
         list.add(new Car("ВАЗ", 2108, 182.7));
         list.add(new Car("ВАЗ", 2109, 191.3));
-        list.add(new Car("ВАЗ", 2110, 205.3));
-        list.add(new Car("ВАЗ", 2111, 205.3));
         return list;
     }
 }
